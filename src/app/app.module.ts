@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { PostCoreComponent } from './post-core/post-core.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreatePostComponent } from './create-post/create-post.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    PostCoreComponent
+    PostCoreComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

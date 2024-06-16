@@ -1,0 +1,20 @@
+<div class="container flex flex-row min-h-screen justify-center items-center mx-auto">
+  <div class="form flex flex-col w-1/4 gap-4">
+    <input type="text" class="bg-gray-200 p-3 rounded-3xl" placeholder="Title" [(ngModel)]="newPost.title" name="title" required />
+    <input type="text" class="bg-gray-200 p-3 rounded-3xl" placeholder="Content" [(ngModel)]="newPost.content" name="content" required />
+    <input
+      type="file"
+      class="text-sm text-stone-500
+        file:mr-5 file:py-1 file:px-3 file:border-[1px]
+        file:text-xs file:font-medium
+        file:bg-stone-50 file:text-stone-700
+        hover:file:cursor-pointer hover:file:bg-blue-50
+        hover:file:text-blue-700"
+      (change)="onFileChange($event)"
+    />
+    <div class="buttons gap-2.5 flex flex-row">
+      <button class="rounded-2xl p-2 text-teal-600 w-2/4 mx-auto cursor-pointer border-2 border-teal-600" (click)="navigate('')">Back</button>
+      <button class="bg-teal-600 rounded-2xl p-2 text-white w-2/4 mx-auto" (click)="createPost()">Create</button>
+    </div>
+  </div>
+</div>
